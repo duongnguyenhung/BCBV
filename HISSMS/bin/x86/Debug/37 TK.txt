@@ -1,0 +1,92 @@
+procedure proc_bc_mautk37_new(
+      schemamonth in string,
+      tungay in string,
+      denngay in string,
+      solieu in string,
+      ref_cur out refCursor) is
+      str clob := null;
+      str1 clob := null;
+      begin
+        for data in (select regexp_substr(schemamonth, '[^,]+', 1, ROWNUM) NEXT_SCHEMA
+                      from dual connect by level <= length(regexp_replace(schemamonth, '[^,]+')) + 1)
+        loop
+            begin
+              if str is null then
+              str:='select ten,dongiat7,DONGIA3, SUM(soluong) AS SL, sum(tongtient7) as tt_7, SUM(DONGIA3*soluong) AS TT_3,ten_loai,ten_nhom,loaiba,QD366
+	,(CASE 
+   WHEN NOICAP =''94001'' THEN ''A. B?NH NHÂN N?I T?NH KCB BAN ??U''
+   WHEN NOISINHSONG =''94'' THEN ''B. B?NH NHÂN N?I T?NH ??N''
+   WHEN NOISINHSONG !=''94'' THEN ''C. B?NH NHÂN NGO?I T?NH ??N'' END) AS NHOM from(
+SELECT c.id
+	,c.ten as ten
+	,sum(b.soluong) as soluong
+	,b.dongia as dongiat7
+	,sum(b.soluong*b.dongia) as tongtient7
+	,d.ten as ten_loai
+	,e.ten as ten_nhom
+	,a.loaiba
+	,c.QD366
+	,a.SOTHE
+	,SUBSTR(b.SOTHE,4,2) as NOISINHSONG
+	,B.NOICAP
+	,(CASE 
+            WHEN B.DONGIA=10500 AND E.MA=13 THEN 4500
+            ELSE c.gia_1
+            END)
+      AS DONGIA3    
+      FROM HSOFT'||data.NEXT_SCHEMA||'.v_m38ll a join HSOFT'||data.NEXT_SCHEMA||'.v_m38ct b on (a.id=b.id)
+           join HSOFT.v_giavp c on (b.mavp = c.id )
+           join HSOFT.v_loaivp d on (c.id_loai = d.id )
+           join HSOFT.v_nhomvp e on (d.id_nhom = e.ma )
+      where to_date(to_char(a.ngayqt,''dd/mm/yyyy''),''dd/mm/yyyy'') between to_date('''||tungay||''',''dd/mm/yyyy'') and to_date('''||denngay||''',''dd/mm/yyyy'') and a.useridduyet IS NOT NULL and( e.ma=13 or e.ma=14 or e.ma=11 or e.ma=17 or e.ma=6 or e.ma=9 or e.ma=2 or e.ma=16) and a.loaiba'||solieu||'
+      GROUP BY c.id,c.ten,c.gia_1,b.dongia,d.ten,e.ten,a.loaiba,c.QD366,a.SOTHE,SUBSTR(b.SOTHE,4,2),B.NOICAP,CASE
+      WHEN B.DONGIA=10500 AND E.MA=13 THEN 4500 ELSE c.gia_1 END
+      )
+	  where tongtient7-DONGIA3*soluong>0
+group by ten,dongiat7,ten_loai,ten_nhom,loaiba,QD366,DONGIA3,(CASE 
+   WHEN NOICAP =''94001'' THEN ''A. B?NH NHÂN N?I T?NH KCB BAN ??U''
+   WHEN NOISINHSONG =''94'' THEN ''B. B?NH NHÂN N?I T?NH ??N''
+   WHEN NOISINHSONG !=''94'' THEN ''C. B?NH NHÂN NGO?I T?NH ??N'' END)';
+              else
+                str:= str ||  ' union select ten,dongiat7,DONGIA3, SUM(soluong) AS SL, sum(tongtient7) as tt_7, SUM(DONGIA3*soluong) AS TT_3,ten_loai,ten_nhom,loaiba,QD366
+	,(CASE 
+   WHEN NOICAP =''94001'' THEN ''A. B?NH NHÂN N?I T?NH KCB BAN ??U''
+   WHEN NOISINHSONG =''94'' THEN ''B. B?NH NHÂN N?I T?NH ??N''
+   WHEN NOISINHSONG !=''94'' THEN ''C. B?NH NHÂN NGO?I T?NH ??N'' END) AS NHOM from(
+SELECT c.id
+	,c.ten as ten
+	,sum(b.soluong) as soluong
+	,b.dongia as dongiat7
+	,sum(b.soluong*b.dongia) as tongtient7
+	,d.ten as ten_loai
+	,e.ten as ten_nhom
+	,a.loaiba
+	,c.QD366
+	,a.SOTHE
+	,SUBSTR(b.SOTHE,4,2) as NOISINHSONG
+	,B.NOICAP
+	,(CASE 
+            WHEN B.DONGIA=10500 AND E.MA=13 THEN 4500
+            ELSE c.gia_1
+            END)
+      AS DONGIA3    
+      FROM HSOFT'||data.NEXT_SCHEMA||'.v_m38ll a join HSOFT'||data.NEXT_SCHEMA||'.v_m38ct b on (a.id=b.id)
+           join HSOFT.v_giavp c on (b.mavp = c.id )
+           join HSOFT.v_loaivp d on (c.id_loai = d.id )
+           join HSOFT.v_nhomvp e on (d.id_nhom = e.ma )
+      where to_date(to_char(a.ngayqt,''dd/mm/yyyy''),''dd/mm/yyyy'') between to_date('''||tungay||''',''dd/mm/yyyy'') and to_date('''||denngay||''',''dd/mm/yyyy'') and a.useridduyet IS NOT NULL and( e.ma=13 or e.ma=14 or e.ma=11 or e.ma=17 or e.ma=6 or e.ma=9 or e.ma=2 or e.ma=16) and a.loaiba'||solieu||'
+      GROUP BY c.id,c.ten,c.gia_1,b.dongia,d.ten,e.ten,a.loaiba,c.QD366,a.SOTHE,SUBSTR(b.SOTHE,4,2),B.NOICAP,CASE
+      WHEN B.DONGIA=10500 AND E.MA=13 THEN 4500 ELSE c.gia_1 END
+      )
+	  where tongtient7-DONGIA3*soluong>0
+group by ten,dongiat7,ten_loai,ten_nhom,loaiba,QD366,DONGIA3,(CASE 
+   WHEN NOICAP =''94001'' THEN ''A. B?NH NHÂN N?I T?NH KCB BAN ??U''
+   WHEN NOISINHSONG =''94'' THEN ''B. B?NH NHÂN N?I T?NH ??N''
+   WHEN NOISINHSONG !=''94'' THEN ''C. B?NH NHÂN NGO?I T?NH ??N'' END)';
+              end if;
+            end;
+        end loop;
+        str1:='select ten,dongiat7,DONGIA3,sum(SL) as SL,sum(tt_7) as tt_7,sum(TT_3) as TT_3,ten_loai,ten_nhom,loaiba,QD366,nhom from ( ' || str || ') 
+group by ten,dongiat7,DONGIA3,ten_loai,ten_nhom,loaiba,QD366,nhom';
+        open ref_cur for str1;
+    end proc_bc_mautk37_new;

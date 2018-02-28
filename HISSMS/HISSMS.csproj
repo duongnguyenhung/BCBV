@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FE98415-E5AE-422C-B08B-4D09B36AB332}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HISSMS</RootNamespace>
+    <AssemblyName>HISSMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HISSMS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dialogs.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraDialogs.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\app\huaquocthi\product\11.1.0\client_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2017.2.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Stimulsoft Reports 2017.2.3\Crack\Designers\.NET\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2017.2.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Stimulsoft Reports 2017.2.3\Libs\Net\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2017.2.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Stimulsoft Reports 2017.2.3\Libs\Net\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassPrint.cs" />
+    <Compile Include="Class_CorrectData.cs" />
+    <Compile Include="Class_ket_noi_excel.cs" />
+    <Compile Include="clsSMS.cs" />
+    <Compile Include="clsSMSConfig.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DangNhap.Designer.cs">
+      <DependentUpon>Form_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_viewdata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_viewdata.Designer.cs">
+      <DependentUpon>Form_viewdata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ket_Noi.cs" />
+    <Compile Include="XtraUserControlTTHUYQT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlTTHUYQT.Designer.cs">
+      <DependentUpon>XtraUserControlTTHUYQT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau213Nhom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau213Nhom.Designer.cs">
+      <DependentUpon>XtraUserControlMau213Nhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau21KPN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau21KPN.Designer.cs">
+      <DependentUpon>XtraUserControlMau21KPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TN4210.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TN4210.Designer.cs">
+      <DependentUpon>XtraUserControlMau2526TN4210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TNN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TNN.Designer.cs">
+      <DependentUpon>XtraUserControlMau2526TNN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TN.Designer.cs">
+      <DependentUpon>XtraUserControlMau2526TN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TT4210.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TT4210.Designer.cs">
+      <DependentUpon>XtraUserControlMau2526TT4210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TTN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TTN.Designer.cs">
+      <DependentUpon>XtraUserControlMau2526TTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau2526TT.Designer.cs">
+      <DependentUpon>XtraUserControlMau2526TT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlBNTTU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlBNTTU.Designer.cs">
+      <DependentUpon>XtraUserControlBNTTU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau79804210.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau79804210.Designer.cs">
+      <DependentUpon>XtraUserControlMau79804210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoSieuAm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoSieuAm.Designer.cs">
+      <DependentUpon>XtraUserControlSoSieuAm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoXetNghiem.Designer.cs">
+      <DependentUpon>XtraUserControlSoXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau7980new.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau7980new.Designer.cs">
+      <DependentUpon>XtraUserControlMau7980new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMauCPKPNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMauCPKPNG.Designer.cs">
+      <DependentUpon>XtraUserControlMauCPKPNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK373NhomTH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK373NhomTH.Designer.cs">
+      <DependentUpon>XtraUserControlMauTK373NhomTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK373NNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK373NNew.Designer.cs">
+      <DependentUpon>XtraUserControlMauTK373NNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoMRI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoMRI.Designer.cs">
+      <DependentUpon>XtraUserControlSoMRI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlCV3360.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlCV3360.Designer.cs">
+      <DependentUpon>XtraUserControlCV3360.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoXQuang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoXQuang.Designer.cs">
+      <DependentUpon>XtraUserControlSoXQuang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoNoiSoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoNoiSoi.Designer.cs">
+      <DependentUpon>XtraUserControlSoNoiSoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoPTTT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoPTTT.Designer.cs">
+      <DependentUpon>XtraUserControlSoPTTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSoKhamBenh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSoKhamBenh.Designer.cs">
+      <DependentUpon>XtraUserControlSoKhamBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMauCPKP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMauCPKP.Designer.cs">
+      <DependentUpon>XtraUserControlMauCPKP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK373N.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK373N.Designer.cs">
+      <DependentUpon>XtraUserControlMauTK373N.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK37.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMauTK37.Designer.cs">
+      <DependentUpon>XtraUserControlMauTK37.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau7980.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau7980.Designer.cs">
+      <DependentUpon>XtraUserControlMau7980.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau21.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau21.Designer.cs">
+      <DependentUpon>XtraUserControlMau21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlMau19.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="XtraUserControlMau19.Designer.cs">
+      <DependentUpon>XtraUserControlMau19.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="XtraUserControlMau20.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlMau20.Designer.cs">
+      <DependentUpon>XtraUserControlMau20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlSMS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlSMS.Designer.cs">
+      <DependentUpon>XtraUserControlSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControlThamSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControlThamSo.Designer.cs">
+      <DependentUpon>XtraUserControlThamSo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DangNhap.resx">
+      <DependentUpon>Form_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_viewdata.resx">
+      <DependentUpon>Form_viewdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlTTHUYQT.resx">
+      <DependentUpon>XtraUserControlTTHUYQT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau213Nhom.resx">
+      <DependentUpon>XtraUserControlMau213Nhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau21KPN.resx">
+      <DependentUpon>XtraUserControlMau21KPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau2526TN4210.resx">
+      <DependentUpon>XtraUserControlMau2526TN4210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau2526TNN.resx">
+      <DependentUpon>XtraUserControlMau2526TNN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau2526TN.resx">
+      <DependentUpon>XtraUserControlMau2526TN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau2526TT4210.resx">
+      <DependentUpon>XtraUserControlMau2526TT4210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau2526TTN.resx">
+      <DependentUpon>XtraUserControlMau2526TTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau2526TT.resx">
+      <DependentUpon>XtraUserControlMau2526TT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlBNTTU.resx">
+      <DependentUpon>XtraUserControlBNTTU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau79804210.resx">
+      <DependentUpon>XtraUserControlMau79804210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoSieuAm.resx">
+      <DependentUpon>XtraUserControlSoSieuAm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoXetNghiem.resx">
+      <DependentUpon>XtraUserControlSoXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau7980new.resx">
+      <DependentUpon>XtraUserControlMau7980new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMauCPKPNG.resx">
+      <DependentUpon>XtraUserControlMauCPKPNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMauTK373NhomTH.resx">
+      <DependentUpon>XtraUserControlMauTK373NhomTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMauTK373NNew.resx">
+      <DependentUpon>XtraUserControlMauTK373NNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoMRI.resx">
+      <DependentUpon>XtraUserControlSoMRI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlCV3360.resx">
+      <DependentUpon>XtraUserControlCV3360.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoXQuang.resx">
+      <DependentUpon>XtraUserControlSoXQuang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoNoiSoi.resx">
+      <DependentUpon>XtraUserControlSoNoiSoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoPTTT.resx">
+      <DependentUpon>XtraUserControlSoPTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSoKhamBenh.resx">
+      <DependentUpon>XtraUserControlSoKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMauCPKP.resx">
+      <DependentUpon>XtraUserControlMauCPKP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMauTK373N.resx">
+      <DependentUpon>XtraUserControlMauTK373N.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMauTK37.resx">
+      <DependentUpon>XtraUserControlMauTK37.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau7980.resx">
+      <DependentUpon>XtraUserControlMau7980.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau21.resx">
+      <DependentUpon>XtraUserControlMau21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau19.resx">
+      <DependentUpon>XtraUserControlMau19.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlMau20.resx">
+      <DependentUpon>XtraUserControlMau20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlSMS.resx">
+      <DependentUpon>XtraUserControlSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControlThamSo.resx">
+      <DependentUpon>XtraUserControlThamSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reports\mau_20.mrt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-icon.png" />
+    <None Include="Resources\13704561931834791642delete_page-hi.png" />
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\currency-icon.png" />
+    <None Include="Resources\Search-disease-Icon-518634.png" />
+    <None Include="Resources\web-background-health-edit.png" />
+    <None Include="Resources\test_tube.png" />
+    <None Include="Resources\5043171.png" />
+    <None Include="Resources\504317.png" />
+    <None Include="Resources\nuclear-medicine-icon.png" />
+    <None Include="Resources\ent-treatment-medicine-medical-3258fdac0fbc82bb-512x512.png" />
+    <None Include="Resources\tải xuống.jpg" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\icon-register.png" />
+    <None Include="Resources\256-256-76170ff571088c191d2cf8e74e911e11.png" />
+    <None Include="Resources\PatientIcon.png" />
+    <None Include="Resources\354324.png" />
+    <None Include="Resources\354247.png" />
+    <None Include="Resources\Book-icon copy.png" />
+    <None Include="Resources\medicine-icon-10.png" />
+    <None Include="Resources\icon-4-1.png" />
+    <None Include="Resources\capsule-icon.png" />
+    <None Include="Resources\icon-1.png" />
+    <None Include="Images\Apps-preferences-contact-list-icon_32x32.png" />
+    <Content Include="Images\sms.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
